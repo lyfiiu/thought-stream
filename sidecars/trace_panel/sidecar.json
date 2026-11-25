@@ -1,0 +1,18 @@
+{
+  "command": "node",
+  "args": ["main.mjs"],
+  "restart_policy": "always",
+  "display_name": "Thought Stream",
+  "description": "Claude Code-style live chain-of-thought, tool tree, subagent trace, and stall/disconnect heartbeat monitor.",
+  "has_web_ui": true,
+  "ui_config": {
+    "display_name": "Thought Stream",
+    "views": [
+      {
+        "path": "/",
+        "entrypoint": "SIDECAR_UI_ENTRYPOINT_AUX_PANE",
+        "title": "Thought Stream"
+      }
+    ]
+  }
+}

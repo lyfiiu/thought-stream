@@ -1,0 +1,21 @@
+{
+  "name": "thought-stream",
+  "displayName": "Thought Stream",
+  "description": "Real-time Claude Code-style chain-of-thought viewer, tool call tree, subagent trace, and connection/stall heartbeat monitor.",
+  "logo": "assets/logo.svg",
+  "version": "1.0.0",
+  "author": {
+    "name": "lyfiiu",
+    "url": "https://github.com/lyfiiu"
+  },
+  "homepage": "https://github.com/lyfiiu/thought-stream",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyfiiu/thought-stream"
+  },
+  "suggestedPrompts": [
+    "打开 Thought Stream 侧边栏查看实时思维链与工具调用过程",
+    "检查当前任务是否卡住、等待授权或与后台断联",
+    "追踪子代理 (Subagent) 的执行步骤与上下文消耗"
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thought Stream · Claude Code Trace</title>
+  <script src="/preload.js"></script>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="top-bar">
+      <div class="bar-row bar-primary">
+        <div class="brand-group">
+          <span id="conn-dot" class="pulse-dot is-connecting"></span>
+          <span class="brand-title">Thought Stream</span>
+          <span id="conn-badge" class="badge badge-neutral">Connecting…</span>
+          <span id="state-badge" class="badge badge-idle">IDLE</span>
+        </div>
+
+        <div class="controls-group">
+          <select id="conv-select" class="conv-select" title="Switch conversation"></select>
+          <button id="btn-expand-think" class="icon-btn is-active" type="button" title="Auto-expand thinking">∴ Think</button>
+          <button id="btn-lang" class="icon-btn" type="button" title="Switch language">中文</button>
+        </div>
+      </div>
+
+      <div id="now-banner" class="now-banner is-idle">
+        <div class="now-main">
+          <span id="now-icon" class="now-icon">●</span>
+          <span id="now-text" class="now-text">Waiting for session…</span>
+        </div>
+        <div class="now-timers">
+          <span id="timer-turn" class="timer-pill" title="Current turn elapsed">--</span>
+          <span id="timer-silence" class="timer-pill" title="Time since last progress update">--</span>
+          <div id="heartbeat-bars" class="heartbeat-bars" title="Live RPC heartbeat & latency"></div>
+        </div>
+      </div>
+
+      <div id="subagent-strip" class="subagent-strip hidden"></div>
+
+      <div class="bar-row bar-filters">
+        <div class="filter-pills" id="filter-pills">
+          <button class="filter-pill is-active" data-filter="all" type="button">All</button>
+          <button class="filter-pill" data-filter="thinking" type="button">Thinking</button>
+          <button class="filter-pill" data-filter="tools" type="button">Tools</button>
+          <button class="filter-pill" data-filter="errors" type="button">Errors</button>
+        </div>
+        <div class="summary-stats" id="summary-stats"></div>
+      </div>
+    </header>
+
+    <main id="timeline" class="timeline"></main>
+
+    <button id="jump-live" class="jump-live hidden" type="button">↓ Jump to Live</button>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
